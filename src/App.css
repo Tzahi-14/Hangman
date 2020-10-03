@@ -8,3 +8,11 @@
 #string{
   margin:2rem;
 }
+
+.selected{
+  text-decoration: line-through
+}
+
+#endGame{
+  margin:2rem;
+}

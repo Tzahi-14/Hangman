@@ -4,9 +4,13 @@ import React, { Component } from 'react';
 
 class Solution extends Component {
     render() {
-        const arr = ["_ ","_ ","_ ","_ "]
+        const arr = ["_ ", "_ ", "_ ", "_ "]
         return (
-            <div id="solution">{arr.map(underScore =><span>{underScore}</span>)}</div>)
+            <div id="solution">
+                <div>{this.props.word.split('').map((letter, index)=> this.props.letterStatus[letter] ? <Letter key={index} letter={letter} /> : <Letter key={index} letter="-" />)} 
+                </div>
+                <em >{this.props.hint}</em>
+            </div>)
     }
 }
 export default Solution
